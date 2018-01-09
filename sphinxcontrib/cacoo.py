@@ -1,7 +1,9 @@
 import re
 import json
 from time import mktime
-from urllib2 import urlopen
+from future.standard_library import install_aliases
+install_aliases()
+from urllib.request import urlopen
 from email.utils import parsedate
 from sphinxcontrib.imagehelper import (
     ImageConverter, add_image_type, add_image_directive, add_figure_directive
